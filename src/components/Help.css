@@ -1,0 +1,53 @@
+.support-contacts {
+  display: grid;
+  gap: 10px;
+  margin: 22px 0;
+}
+.support-contacts > a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 76px;
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--ink);
+  background: #f7f8f3;
+  text-decoration: none;
+}
+.support-contacts > a:hover {
+  border-color: var(--orange-dark);
+  background: #fff6ef;
+}
+.support-contacts > a:focus-visible {
+  outline: 2px solid var(--orange-dark);
+  outline-offset: 3px;
+}
+.support-contacts > a > svg {
+  flex-shrink: 0;
+  color: var(--orange-dark);
+}
+.support-contacts > a > span {
+  min-width: 0;
+  flex: 1;
+}
+.support-contacts strong,
+.support-contacts span > span {
+  display: block;
+  overflow-wrap: anywhere;
+}
+.support-contacts strong {
+  font-size: 13px;
+  line-height: 1.6;
+}
+.support-contacts span > span {
+  margin-top: 3px;
+  color: #555e50;
+  font-size: 14px;
+}
+@media (max-width: 480px) {
+  .support-contacts > a {
+    gap: 10px;
+    padding: 13px 12px;
+  }
+}

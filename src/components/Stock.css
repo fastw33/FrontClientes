@@ -1,0 +1,253 @@
+.ops-stock,
+.stock-lots {
+  scroll-margin-top: 18px;
+}
+.ops-stock .stock-searchbar {
+  display: grid;
+  grid-template-columns: 175px minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: end;
+  margin-top: 22px;
+}
+.ops-stock .stock-searchbar .ops-search {
+  margin: 0;
+  min-width: 0;
+  min-height: 48px;
+}
+.stock-field {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  color: #555e50;
+  font-size: 12px;
+  font-weight: 600;
+}
+.stock-field select {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+}
+.ops-stock .stock-filter-toggle {
+  min-height: 48px;
+}
+.stock-filter-toggle.is-open {
+  border-color: #cd6e4c;
+  background: #fff5ef;
+  color: #a7350f;
+}
+.stock-filter-count {
+  display: inline-grid;
+  place-items: center;
+  min-width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: #ab340d;
+  color: #fff;
+  font-size: 11px;
+}
+.stock-filters:not([hidden]) {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  padding: 16px;
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #f7f8f3;
+}
+.stock-results-bar,
+.stock-lots-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.stock-results-bar {
+  min-height: 48px;
+  margin-block: 8px;
+  font-size: 12px;
+  color: #62685e;
+}
+.stock-results-bar .button {
+  min-height: 44px;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+.stock-filter-note {
+  color: #62685e;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.ops-stock .stock-expand {
+  min-height: 44px;
+  padding: 9px 12px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.stock-expand[aria-expanded='true'] svg {
+  transform: rotate(180deg);
+}
+.inventory-page .ops-stock .stock-product-open {
+  background: #fff8f3;
+}
+.inventory-page .ops-stock .stock-lots-row > td {
+  max-width: none;
+  padding: 0;
+}
+.stock-lots {
+  background: #f7f8f3;
+  padding: 20px;
+  border-left: 3px solid var(--orange);
+}
+.stock-lots-heading > div {
+  min-width: 0;
+  flex: 1;
+}
+.stock-lots-heading h3 {
+  margin: 0;
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+.stock-lots-heading .button {
+  min-width: 44px;
+  min-height: 44px;
+}
+.ops-stock .stock-lots-table {
+  width: 100%;
+  min-width: 0;
+  border-collapse: collapse;
+  font-size: 13px;
+  background: #fff;
+  text-align: left;
+}
+.ops-stock .stock-lots-table thead {
+  position: static;
+  display: table-header-group;
+  width: auto;
+  height: auto;
+  clip-path: none;
+}
+.ops-stock .stock-lots-table tbody {
+  display: table-row-group;
+}
+.ops-stock .stock-lots-table tr {
+  display: table-row;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+}
+.ops-stock .stock-lots-table th,
+.ops-stock .stock-lots-table td {
+  display: table-cell;
+  max-width: none;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+.ops-stock .stock-lots-table td::before {
+  display: none;
+}
+.ops-stock .stock-lots-table th {
+  font-size: 11px;
+  background: #edf0e7;
+  color: #555e50;
+}
+@media (max-width: 700px) {
+  .ops-stock,
+  .stock-lots {
+    scroll-margin-top: 90px;
+  }
+  .ops-stock .stock-searchbar {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+  }
+  .ops-stock .stock-searchbar .ops-search {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  .ops-stock .stock-searchbar select,
+  .ops-stock .stock-filters select {
+    font-size: 16px;
+  }
+  .stock-filters:not([hidden]) {
+    grid-template-columns: 1fr;
+    padding: 14px;
+  }
+  .inventory-page .ops-stock td[data-label='Lotes'] {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--line);
+  }
+  .inventory-page .ops-stock td[data-label='Lotes']::before,
+  .inventory-page .ops-stock .stock-lots-row > td::before {
+    display: none;
+  }
+  .ops-stock .stock-expand {
+    width: 100%;
+    justify-content: center;
+  }
+  .inventory-page .ops-stock .stock-lots-row {
+    display: block;
+    padding: 0;
+    border: 0;
+    margin-top: -12px;
+    background: transparent;
+  }
+  .inventory-page .ops-stock .stock-lots-row > td {
+    display: block;
+    padding: 0;
+  }
+  .stock-lots {
+    padding: 14px;
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--orange);
+    border-radius: 0 0 12px 12px;
+  }
+  .ops-stock .stock-lots-table,
+  .ops-stock .stock-lots-table tbody {
+    display: block;
+  }
+  .ops-stock .stock-lots-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .ops-stock .stock-lots-table tr {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 10px;
+    padding: 4px 12px;
+    margin-bottom: 10px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+  }
+  .ops-stock .stock-lots-table td {
+    display: block;
+    padding: 10px 0;
+    border: 0;
+    font-size: 12px;
+  }
+  .ops-stock .stock-lots-table td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 5px;
+    color: #62685e;
+    font-size: 11px;
+  }
+  .ops-stock .stock-lots-table td:last-child {
+    grid-column: 1 / -1;
+  }
+}

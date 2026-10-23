@@ -1,0 +1,115 @@
+.movements-page .movements-count {
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  color: #555e50;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.movements-filters {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+}
+.movements-page .movements-filters .ops-search {
+  flex: 1 1 260px;
+  margin: 0;
+  min-height: 46px;
+}
+.movements-field {
+  display: flex;
+  flex: 0 1 auto;
+  min-width: 0;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 11px;
+  color: #555e50;
+  font-weight: 700;
+}
+.movements-field input,
+.movements-field select {
+  min-height: 48px;
+  min-width: 0;
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #dadcd3;
+  border-radius: 9px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 12px;
+}
+.movements-page .movements-table {
+  min-width: 920px;
+}
+.movements-page .movement-date {
+  min-width: 165px;
+  font-variant-numeric: tabular-nums;
+}
+.movements-page .movement-product {
+  min-width: 170px;
+}
+.movements-page .movement-quantity {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.movement-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  padding: 6px 9px;
+  border-radius: 6px;
+  background: #eef0e8;
+  color: #475340;
+  font-size: 11px;
+  font-weight: 750;
+}
+.movement-type-entrada {
+  background: #e9f5eb;
+  color: #22633c;
+}
+.movement-type-salida {
+  background: #fff0e7;
+  color: #a5370e;
+}
+.movements-updated {
+  text-align: right;
+  margin-top: 12px;
+}
+@media (max-width: 600px) {
+  .movements-filters {
+    gap: 10px;
+  }
+  .movements-page .movements-filters .ops-search {
+    flex-basis: 100%;
+  }
+  .movements-field {
+    flex: 1 1 100%;
+  }
+  .movements-field:has(input[type='date']) {
+    flex: 1 1 calc(50% - 5px);
+  }
+  .movements-field input,
+  .movements-field select {
+    font-size: 16px;
+    padding-inline: 8px;
+  }
+  .movements-page .page-title {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .movements-page .ops-pagination {
+    align-items: flex-start;
+  }
+  .movements-page .ops-pagination > span {
+    max-width: 150px;
+  }
+}
+@media (max-width: 380px) {
+  .movements-field:has(input[type='date']) {
+    flex-basis: 100%;
+  }
+}

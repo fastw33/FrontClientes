@@ -1,0 +1,70 @@
+.bic-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 114px;
+  min-width: 0;
+  min-height: 44px;
+  flex: 0 0 auto;
+}
+.bic-badge img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.bic-badge:focus-visible {
+  outline: 2px solid var(--orange-dark);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+.public-header > .bic-badge {
+  margin-left: auto;
+}
+.public-header > .help-button {
+  margin-left: 0;
+}
+.portal-header-right > .bic-badge {
+  width: 92px;
+  margin-left: 4px;
+}
+@media (max-width: 960px) {
+  .public-header > .bic-badge {
+    width: 88px;
+  }
+  .portal-header-right > .bic-badge {
+    width: 68px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 480px) {
+  .public-layout .public-header {
+    gap: 8px;
+  }
+  .public-header > .bic-badge {
+    width: 70px;
+  }
+  .portal-main .portal-header {
+    gap: 6px;
+  }
+  .portal-header .mobile-header-brand .brand {
+    width: 112px;
+  }
+  .portal-main .portal-header-right {
+    gap: 4px;
+  }
+  .portal-header-right > .bic-badge {
+    width: 62px;
+  }
+}
+@media (max-width: 600px) {
+  .public-header > .help-button {
+    width: 44px;
+    min-width: 44px;
+    justify-content: center;
+  }
+  .public-header > .help-button > span,
+  .public-header > .help-button > svg:last-child {
+    display: none;
+  }
+}

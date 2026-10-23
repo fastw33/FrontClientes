@@ -1,0 +1,37 @@
+{
+  "name": "clients-fastway",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "24.22.0"
+  },
+  "scripts": {
+    "node": "node scripts/node.cjs",
+    "dev": "node scripts/node.cjs node_modules/vite/bin/vite.js",
+    "build": "node scripts/node.cjs node_modules/vite/bin/vite.js build",
+    "preview": "node scripts/node.cjs node_modules/vite/bin/vite.js preview",
+    "test": "node scripts/node.cjs --test test/auth.test.js test/operations.test.js test/operation-schedule.test.js",
+    "test:ui": "node scripts/node.cjs test/ui-check.mjs",
+    "test:operations": "node scripts/node.cjs test/operations-ui.mjs",
+    "test:agenda": "node scripts/node.cjs test/scheduled-operations-ui.mjs",
+    "test:alistamiento": "node scripts/node.cjs test/picking-pagination-ui.mjs",
+    "test:movements": "node scripts/node.cjs test/movements-ui.mjs",
+    "test:documents": "node scripts/node.cjs test/documents-ui.mjs",
+    "format": "node scripts/node.cjs node_modules/prettier/bin/prettier.cjs --write src scripts test vite.config.js index.html package.json README.md"
+  },
+  "dependencies": {
+    "@fontsource-variable/manrope": "5.3.0",
+    "lucide-react": "1.59.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-router-dom": "7.18.4"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.64.1",
+    "@vitejs/plugin-react": "6.1.2",
+    "prettier": "3.9.10",
+    "vite": "8.3.4"
+  }
+}

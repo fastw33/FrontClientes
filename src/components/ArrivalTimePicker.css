@@ -1,0 +1,148 @@
+.arrival-time-picker {
+  position: relative;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.arrival-time-picker > label {
+  font-size: 12px;
+  font-weight: 600;
+}
+.arrival-time-input {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  border: 1px solid #d8dcd1;
+  border-radius: 9px;
+  background: #fff;
+  padding: 0 12px;
+  gap: 10px;
+  min-width: 0;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+.arrival-time-input > svg {
+  flex-shrink: 0;
+  color: #717a68;
+}
+.arrival-time-picker .arrival-time-input input {
+  border: 0;
+  box-shadow: none;
+  outline: none !important;
+  padding: 0;
+  min-height: 44px;
+  height: 44px;
+  border-radius: 0;
+  background: transparent;
+  font-size: 14px;
+  flex: 1;
+  width: 0;
+  min-width: 0;
+}
+.arrival-time-input:focus-within {
+  border-color: var(--orange-dark);
+  box-shadow: 0 0 0 3px #ef5c2014;
+}
+.arrival-time-input button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  color: #666f5c;
+  flex-shrink: 0;
+  width: 28px;
+  min-height: 38px;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.arrival-time-input button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.arrival-time-popup {
+  position: absolute;
+  top: calc(100% + 7px);
+  left: 0;
+  width: 100%;
+  z-index: 12;
+  background: #fff;
+  border: 1px solid #dde2d5;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px #2732221c;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.arrival-time-popup > p {
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  color: #69735e;
+  padding: 9px 10px 10px;
+  margin: 0;
+}
+.arrival-time-popup-above {
+  top: auto;
+  bottom: calc(100% + 7px);
+}
+.arrival-time-popup ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: var(--arrival-options-height, 215px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #d7ddce transparent;
+}
+.arrival-time-popup [role='option'] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 11px;
+  min-height: 42px;
+  box-sizing: border-box;
+  border-radius: 7px;
+  font-size: 14px;
+  color: #30372b;
+  cursor: pointer;
+}
+.arrival-time-popup [role='option'][data-active='true'] {
+  background: #f2f4ec;
+}
+.arrival-time-popup [role='option'][aria-selected='true'] {
+  background: #fff0e7;
+  color: #a5360c;
+  font-weight: 700;
+}
+.arrival-time-popup > small {
+  display: block;
+  border-top: 1px solid #edf0e7;
+  color: #5c6652;
+  font-size: 11px;
+  line-height: 1.6;
+  margin-top: 7px;
+  padding: 10px 10px 3px;
+}
+.arrival-time-empty {
+  padding: 16px 10px;
+  font-size: 12px;
+  color: #5c6652;
+}
+@media (max-width: 600px) {
+  .arrival-time-picker .arrival-time-input input {
+    font-size: 16px;
+  }
+  .arrival-time-popup ul {
+    max-height: min(180px, var(--arrival-options-height, 215px));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .arrival-time-input {
+    transition: none;
+  }
+}

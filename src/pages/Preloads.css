@@ -1,0 +1,126 @@
+.preload-entry-modal .modal-heading {
+  margin-bottom: 18px;
+}
+.preload-entry-modal .preload-entry-form {
+  gap: 16px;
+}
+.preload-entry-modal .preload-arrival {
+  border: 1px solid #e0e3d9;
+  border-radius: 10px;
+  padding: 14px;
+  background: #f7f8f3;
+}
+.preload-arrival-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.preload-arrival-summary > svg {
+  color: var(--orange-dark);
+  flex-shrink: 0;
+}
+.preload-arrival-summary > div {
+  flex: 1;
+  min-width: 0;
+}
+.preload-arrival-summary span,
+.preload-arrival-summary strong,
+.preload-arrival-summary small {
+  display: block;
+}
+.preload-arrival-summary span {
+  font-size: 11px;
+  color: #62685e;
+}
+.preload-arrival-summary strong {
+  margin-block: 4px;
+  font-size: 14px;
+}
+.preload-arrival-summary small {
+  font-size: 10px;
+  color: #62685e;
+}
+.preload-arrival-summary .button {
+  min-height: 38px;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+.preload-arrival .schedule-arrival-inputs {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  margin-top: 14px;
+}
+.preload-entry-form .ops-line {
+  padding: 12px;
+}
+.preload-entry-form .ops-line-heading h3 {
+  font-size: 15px;
+}
+.preload-extra {
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+}
+.preload-extra > summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+}
+.preload-extra > summary::-webkit-details-marker {
+  display: none;
+}
+.preload-extra > summary span {
+  font-weight: 400;
+  color: #62685e;
+}
+.preload-extra > summary svg {
+  margin-left: auto;
+}
+.preload-extra[open] > summary svg {
+  transform: rotate(180deg);
+}
+.preload-extra > .field {
+  margin-top: 14px;
+}
+@media (max-width: 600px) {
+  .preload-entry-modal .modal-content {
+    padding: 18px;
+    max-height: calc(92dvh - 2px);
+  }
+  .preload-entry-modal.modal {
+    max-height: 92dvh;
+  }
+  .preload-entry-modal .modal-heading h2 {
+    font-size: 18px;
+  }
+  .preload-arrival-summary {
+    display: grid;
+    grid-template-columns: 21px minmax(0, 1fr);
+    gap: 10px;
+  }
+  .preload-arrival-summary > .button {
+    grid-column: 2;
+    justify-self: start;
+    margin: 0;
+    min-height: 36px;
+  }
+  .preload-entry-modal .modal-actions {
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+  .preload-entry-modal .modal-actions .button {
+    min-width: 0;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+  .preload-entry-modal .modal-actions .button-primary {
+    flex: 1;
+  }
+}
+.ops-status-parcial {
+  background: #eaf2fd;
+  color: #285b8a;
+}
